@@ -1,0 +1,66 @@
+﻿@model IEnumerable<QualyTeam.Documento>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bem Vindo!</h1>
+    <p>Aqui está a lista de documentos.</p>
+</div>
+
+<h1>Documentos</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Adicionar</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Codigo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Titulo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Processo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Categoria)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeArquivo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Codigo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Titulo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Processo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Categoria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeArquivo)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Codigo" class="btn btn-primary btn-sm">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Codigo" class="btn btn-info btn-sm">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.Codigo" class="btn btn-danger btn-sm">Deletar</a> |
+                <a asp-action="Download" asp-route-id="@item.Codigo" class="btn btn-success btn-sm">Baixar</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

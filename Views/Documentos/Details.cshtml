@@ -1,0 +1,50 @@
+﻿@model QualyTeam.Documento
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+    <h1>Details</h1>
+
+<div>
+    <h4>Documento</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Codigo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Codigo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Titulo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Processo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Processo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Categoria)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Categoria)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NomeArquivo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NomeArquivo)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Codigo" class="btn btn-primary btn-sm">Editar</a> |
+    <a asp-action="Delete" asp-route-id="@Model.Codigo" class="btn btn-danger btn-sm">Deletar</a> |
+    <a asp-action="Download" asp-route-id="@Model.Codigo" class="btn btn-success btn-sm">Baixar</a> |
+    <a asp-action="Index" class="btn btn-light btn-sm">Voltar para o inicio</a>
+</div>
