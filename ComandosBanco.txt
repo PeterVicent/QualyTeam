@@ -1,6 +1,6 @@
 CREATE TABLE Documento
 (
-	Codigo INT NOT NULL PRIMARY KEY,
+    Codigo INT NOT NULL PRIMARY KEY,
     Titulo VARCHAR(100) NOT NULL,
     NomeProcesso VARCHAR(100) NOT NULL,
     Processo INT NOT NULL,
@@ -12,9 +12,9 @@ CREATE TABLE Documento
 
 CREATE TABLE Processo
 (
-	Codigo INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    Codigo INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     Processo VARCHAR(100) NOT NULL
 );
 
 INSERT INTO Processo (Processo)
-VALUES ("Incio"), ("Meio"), ("Fim");
+VALUES ("Início"), ("Meio"), ("Fim");
