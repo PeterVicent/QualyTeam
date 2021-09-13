@@ -31,11 +31,11 @@ namespace QualyTeam
         [Column("Categoria")]
         public string Categoria { get; set; }
 
-        [Display(Name = "Documento")]
+        [Display(Name = "Arquivo")]
         [Column("NomeDocumento")]
         public string NomeArquivo { get; set; }
 
-        [Display(Name = "Documento")]
+        [Display(Name = "Arquivo")]
         [Column("Documento")]
         public byte[] Arquivo { get; set; }
 
