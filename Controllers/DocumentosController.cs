@@ -152,7 +152,7 @@ namespace QualyTeam.Controllers
                 {
                     var DocumentoTMP = await ProcuraDocumento(documento.Codigo);
                     documento.Arquivo = DocumentoTMP.Arquivo;
-                    documento.NomeArquivo = DocumentoTMP.NomeArquivo;
+                    documento.NomeArquivo = documento.Titulo + DocumentoTMP.ExtensaoArquivo;
                     documento.ExtensaoArquivo = DocumentoTMP.ExtensaoArquivo;
                 }
 

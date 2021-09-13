@@ -23,10 +23,10 @@
             @Html.DisplayFor(model => model.Titulo)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Processo)
+            @Html.DisplayNameFor(model => model.NomeProcesso)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Processo)
+            @Html.DisplayFor(model => model.NomeProcesso)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Categoria)
@@ -46,5 +46,5 @@
     <a asp-action="Edit" asp-route-id="@Model.Codigo" class="btn btn-primary btn-sm">Editar</a> |
     <a asp-action="Delete" asp-route-id="@Model.Codigo" class="btn btn-danger btn-sm">Deletar</a> |
     <a asp-action="Download" asp-route-id="@Model.Codigo" class="btn btn-success btn-sm">Baixar</a> |
-    <a asp-action="Index" class="btn btn-light btn-sm">Voltar para o inicio</a>
+    <a asp-action="Index" class="btn btn-light btn-sm">Voltar para o início</a>
 </div>
